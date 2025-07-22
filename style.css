@@ -1,0 +1,452 @@
+/* style.css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dib u habeyn aasaasi ah */
+body {
+    font-family: 'Arial', sans-serif;
+    /* margin: 0;
+    padding: 0;
+    box-sizing: border-box; */
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffd700; /* Midab dahab ah */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Common Styles for Sections */
+main {
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 30px;
+
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #b04000; /* Midab casaan-madow ah */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #b04000;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #8b3200;
+}
+
+.read-more {
+    display: inline-block;
+    color: #b04000;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section (Homepage) */
+.hero {
+    background-image: url('images/resturent.jpg'); /* Hubi inuu jiro sawirkan */
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2px;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay madow */
+    border-radius: 8px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+/* Featured Dishes (Homepage) */
+.featured-dishes .dishes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.dish-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.dish-card:hover {
+    transform: translateY(-5px);
+}
+
+.dish-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.dish-card h3 {
+    color: #b04000;
+    margin: 15px 0 10px;
+}
+
+.dish-card p {
+    padding: 0 15px 20px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Menu Page */
+.menu-page h1 {
+    margin-top: 0;
+}
+
+.category {
+    margin-bottom: 40px;
+}
+
+.category h2 {
+    color: #b04000;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.menu-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    color: #b04000;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.menu-item p {
+    font-size: 0.95rem;
+    color: #666;
+    flex-grow: 1; /* Allows paragraph to take up available space */
+}
+
+.menu-item .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50; /* Cagaar */
+    text-align: right;
+    margin-top: 15px;
+}
+
+/* Contact Page */
+.contact-page .contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact-page .contact-info ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-page .contact-info ul li a {
+    color: #b04000;
+    text-decoration: none;
+}
+
+.contact-page .contact-info ul li a:hover {
+    text-decoration: underline;
+}
+
+.map-container {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+}
+
+.contact-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: calc(100% - 24px); /* Subtract padding */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #b04000;
+    outline: none;
+    box-shadow: 0 0 5px rgba(176, 64, 0, 0.3);
+}
+
+.contact-form button.btn {
+    width: auto;
+    align-self: flex-start; /* Align button to the left */
+}
+
+.social-media {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-media p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #b04000;
+}
+
+/* About Us section on Contact Page */
+.about-us {
+    padding-top: 20px;
+}
+
+.about-us h1 {
+    margin-top: 0;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .featured-dishes .dishes-container,
+    .menu-items-grid {
+        grid-template-columns: 1fr; /* Hal tiir marka shaashadu yar tahay */
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+.main-footer {
+    background-color: #222;
+    color: #eee;
+    padding: 50px 0 20px;
+    font-size: 0.9em;
+}
+
+.main-footer .footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.main-footer .footer-column h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.main-footer .footer-column ul {
+    list-style: none;
+}
+
+.main-footer .footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.main-footer .footer-column ul li a {
+    color: #eee;
+    transition: color 0.3s ease;
+}
+
+.main-footer .footer-column ul li a:hover {
+    color: #007bff;
+}
+
+.main-footer .footer-column p {
+    margin-bottom: 8px;
+}
+
+.main-footer .copyright {
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 30px;
+    color: #bbb;
+}
